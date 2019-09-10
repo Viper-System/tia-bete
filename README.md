@@ -7,9 +7,7 @@ Aqui será implementado todas as funções visuais que serão entregues ao usuá
 
 ## Lado Servidor
 
-Aqui será implementado todas as funções operacionais que serão entregues ao usuário por meio de uma conexão ao lado cliente.
-
-Antes de inicializar a codificação neste lado, é preciso instalar as suas dependências por meio do NodeJS:
+Aqui será implementado todas as funções operacionais que serão entregues ao usuário por meio de uma conexão ao lado cliente. Antes de inicializar a codificação neste lado, é preciso instalar as suas dependências por meio do NodeJS:
 
 *Comando: **"express install"** na pasta do aplicativo.*
 
