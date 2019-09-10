@@ -19,3 +19,4 @@ Deploys:
 
 
 05/09/2019 => Criação do Servidor para trabalhar em sua conectividade.
+09/09/2019 => Servidor configurado para atender uma rota inicial.
