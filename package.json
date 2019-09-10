@@ -1,0 +1,22 @@
+{
+  "name": "tia-bete-server",
+  "version": "1.0.0",
+  "description": "servidor da tia bete",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SawadaSaiko/Viper-Tia-Bete.git"
+  },
+  "author": "viper-systems",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SawadaSaiko/Viper-Tia-Bete/issues"
+  },
+  "homepage": "https://github.com/SawadaSaiko/Viper-Tia-Bete#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
