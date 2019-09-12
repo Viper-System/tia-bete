@@ -2,7 +2,7 @@
 
 Aqui será implementado todas as funções visuais que serão entregues ao usuário.
 
-*Comando: **npm install bootstrap** na pasta do aplicativo para instalar a dependencia do bootstrap;
+*Comando: **npm install bootstrap** na pasta do aplicativo para instalar a dependencia do bootstrap*
 
 a) **Bootstrap** - É uma framework para trabalho direto e rápido no front end.
 
