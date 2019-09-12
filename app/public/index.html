@@ -8,9 +8,40 @@
 </head>
 <body>
 
-    
-    <h1>Está funcionando!</h1>
-    <h1>Testando 123 - atualização</h1>
+<!-- Aqui vamos trabalhar com um formulário de teste para atender resultados. mas tudo em html? mais ou menos-->
+
+<form  action="/calc" method="POST">
+        <a href="">Glicose</a>
+        <input type="number" name="glicose" id="glicose">    
+        <a href="">carboidratos</a>
+        <input type="number" name="carboidratos" id="carboidratos">  
+        <br>        
+        <button id = "botao">Envie aqui!</button>
+</form>
+
+        <div id="resultado" ></div>
+        
+
+<!--
+<script> 
+
+function glicose() {
+
+var glicose = document.getElementById('glicose').value;
+var carboidratos = document.getElementById('carboidratos').value;
+
+var insulina;
+
+insulina = glicose / carboidratos;
+
+
+ document.getElementById("resultado").innerHTML = insulina;
+
+}
+
+
+</script>
+-->
 
 
 </body>
