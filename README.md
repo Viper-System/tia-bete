@@ -16,13 +16,14 @@ Aqui será implementado todas as funções operacionais que serão entregues ao 
 
 *Comando: **"npm body-parser install"** na pasta do aplicativo*
 
-a) **ExpressJS** - Abra o Prompt e na pasta que o repositório foi clonado: npm install express
+a) **ExpressJS** - É um módulo o qual facilita a criação e conexão de um servidor Node com a utilização de rotas.
 
 b) **Nodemon** - É um executor de testes, apenas inicialize o arquivo por meio do comando, no prompt, com **"nodemon server.js"**, que ele ficará atualizando pelo prompt/terminal o que há no servidor sempre que um save for executado.
 
-c) **Body-Parser** - É leitor facilitador de requisições e respostas entre o servidor e cliente.
+c) **Body-Parser** - É um leitor facilitador de requisições e respostas entre o servidor e cliente.
 
- 
+
+
 Commits:
 
 **05/09/2019** => Criação do Servidor para trabalhar em sua conectividade.
