@@ -2,6 +2,17 @@
 
 Aqui será implementado todas as funções visuais que serão entregues ao usuário.
 
+*Comando: **npm install bootstrap** na pasta do aplicativo para instalar a dependencia do bootstrap;
+
+a) **Bootstrap** - É uma framework para trabalho direto e rápido no front end.
+
+Commits:
+
+**12/09/2019** => Tela inicial com configurações na PopUp.
+
+
+
+
 ## Lado Servidor
 
 Aqui será implementado todas as funções operacionais que serão entregues ao usuário por meio de uma conexão ao lado cliente.
