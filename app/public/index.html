@@ -2,17 +2,24 @@
 <html lang="pt-br">
 
 <head>
-    <title>Tia Bete</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="index.css">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
-        integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Pacifico&display=swap" rel="stylesheet">
+
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/9546f2c0d7.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+    <title>Tia Bete</title>
 </head>
 
 <body>
@@ -29,158 +36,202 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
 
-    <div class="container" id="principal">
-        <h1>Tia Bete</h1>
+    <!--Header-->
 
-    </div>
+    <header id="header">
+        <div class="container" id="cabecalho">
+            <div id="logo">
+                <h1 style="
+                    font-family: 'Pacifico', cursive;
+                "><a style="text-decoration: none; color: #fff" href="#home">Diabetz</a></h1>
+            </div>
+            <div class="topnav" id="myTopnav">
+                <a class="nav-link active" href="#"><i class="far fa-user"></i> Tia Beth </a>
+                <a class="nav-link" href="#"><i class="far fa-plus-square"></i> Centros de Saúde</a>
+                <a class="nav-link" href="#"><i class="fas fa-info"></i> Informações</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i></a>
+            </div>
+    </header><!-- #header -->
 
-    <div class="container" id="sino">
+    <section id="hero">
+        <div class="hero">
+            <div class="container" id="Verif">
+                <div class="hero-container text-center" id="pop-up">
 
-    </div>
+                    <div class="container" id="Consulta">
+
+                        <!-- Button trigger modal-->
+
+                        <h1 class="display-4" style="font-family: 'Pacifico', cursive; ">Começar a consulta</h1>
+                        <h2 class="lead">Aqui será feita a consulta de glicose</h2>
+                        <button type="button" class="btn btn-outline-primary btn-lg" data-toggle="modal"
+                            data-target="#glicose">Consulta</button>
 
 
-    <div class="container" id="pop-up">
-        <div <div class="jumbotron" id="Verif">
+                        <!--Modal 1-->
+                        <div class="modal fade" id="glicose" tabindex="-1" role="dialog"
+                            aria-labelledby="VerificaçãoGlicose" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-notify modal-info" role="document">
+                                <!--Content-->
+                                <div class="modal-content text-center">
+                                    <!--Header-->
+                                    <div class="modal-header d-flex justify-content-center">
+                                        <p class="heading">Consulta de glicose</p>
+                                    </div>
 
+                                    <!--Body-->
+                                    <div class="modal-body">
 
-            <h4 class="lead">Verificação</h4>
+                                        <i class="fas fa-heartbeat fa-4x animated rotateIn mb-4"></i>
 
-            <!-- Button trigger modal-->
-            <button type="button" class="btn btn-primary" data-toggle="modal"
-                data-target="#glicose">Verificação</button>
+                                        <p>Sua glicose está controlada?</p>
 
-            <!--Modal 1-->
-            <div class="modal fade" id="glicose" tabindex="-1" role="dialog" aria-labelledby="VerificaçãoGlicose"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-notify modal-info" role="document">
-                    <!--Content-->
-                    <div class="modal-content text-center">
-                        <!--Header-->
-                        <div class="modal-header d-flex justify-content-center">
-                            <p class="heading">Consulta de glicose</p>
+                                    </div>
+
+                                    <!--Footer-->
+                                    <div class="modal-footer flex-center">
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#nivel" data-dismiss="modal">Não</button>
+                                        <button type="button" class="btn btn-outline-info" data-toggle="modal"
+                                            data-target="#glicose-sim" data-dismiss="modal">Sim</button>
+                                    </div>
+                                </div>
+                                <!--/.Content-->
+                            </div>
                         </div>
+                        <!--Modal 1-->
+                        <!--Modal 1-2-->
+                        <div class="modal fade" id="glicose-sim" tabindex="-1" role="dialog"
+                            aria-labelledby="VerificaçãoGlicose" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-notify modal-info" role="document">
+                                <!--Content-->
+                                <div class="modal-content text-center">
+                                    <!--Header-->
+                                    <div class="modal-header d-flex justify-content-center">
+                                        <p class="heading lead">Consulta de glicose</p>
+                                    </div>
 
-                        <!--Body-->
-                        <div class="modal-body">
+                                    <!--Body-->
+                                    <div class="modal-body">
 
-                            <i class="fas fa-heartbeat fa-4x animated rotateIn mb-4"></i>
+                                        <i class="fas fa-heart fa-4x animated rotateIn mb-4"></i>
 
-                            <p>Sua glicose está controlada?</p>
+                                        <p>Muito bem, estamos aqui sempre que precisar!</p>
 
+                                    </div>
+
+                                    <!--Footer-->
+                                    <div class="modal-footer flex-center">
+                                        <button type="button" class="btn btn-primary waves-effect"
+                                            data-dismiss="modal">Ok</button>
+                                    </div>
+                                </div>
+                                <!--/.Content-->
+                            </div>
                         </div>
+                        <!--Modal 1-2-->
+                        <!--Modal 2-->
+                        <div class="modal fade" id="nivel" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-notify modal-info" role="document">
+                                <!--Content-->
+                                <div class="modal-content text-center">
+                                    <!--Header-->
+                                    <div class="modal-header d-flex justify-content-center">
+                                        <p class="heading">Consulta de glicose</p>
+                                    </div>
 
-                        <!--Footer-->
-                        <div class="modal-footer flex-center">
-                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#nivel"
-                                data-dismiss="modal">Não</button>
-                                <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#glicose-sim"
-                                data-dismiss="modal">Sim</button>
+                                    <!--Body-->
+                                    <div class="modal-body">
+
+                                        <i class="fas fa-heartbeat fa-4x animated rotateIn mb-4"></i>
+
+                                        <p>Qual seu nivel de glicose?</p>
+
+                                    </div>
+
+                                    <!-- input Nivel de glicose -->
+
+                                    <div class="form-group">
+                                        <label for="nivelGlicose">Escreva seu nivel de glicose</label>
+                                        <input type="number" name="nivelGli" id="nivelGli" min="1" max="500">
+                                    </div>
+
+                                    <!--Footer-->
+                                    <div class="modal-footer flex-center">
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#resultado" data-dismiss="modal">Enviar</button>
+                                        <button type="button" class="btn btn-outline-info waves-effect"
+                                            data-dismiss="modal">Fechar</button>
+                                    </div>
+                                </div>
+                                <!--/.Content-->
+                            </div>
                         </div>
+                        <!--Modal 2-->
+                        <!--Modal 3-->
+                        <div class="modal fade" id="resultado" tabindex="-1" role="dialog" aria-labelledby="Resultado"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-notify modal-info" role="document">
+                                <!--Content-->
+                                <div class="modal-content text-center">
+                                    <!--Header-->
+                                    <div class="modal-header d-flex justify-content-center">
+                                        <p class="heading">Consulta de glicose</p>
+                                    </div>
+
+                                    <!--Body-->
+                                    <div class="modal-body">
+
+                                        <i class="fas fa-clock fa-4x animated rotateIn mb-4"></i>
+
+                                        <p>*Resultado*</p>
+
+                                    </div>
+
+                                    <!--Footer-->
+                                    <div class="modal-footer flex-center">
+                                        <button type="button" class="btn btn-primary waves-effect"
+                                            data-dismiss="modal">Ok</button>
+                                    </div>
+                                </div>
+                                <!--/.Content-->
+                            </div>
+                        </div>
+                        <!--Modal 3-->
                     </div>
-                    <!--/.Content-->
                 </div>
             </div>
-            <!--Modal 1-->
-            <!--Modal 1-2-->
-            <div class="modal fade" id="glicose-sim" tabindex="-1" role="dialog" aria-labelledby="VerificaçãoGlicose"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-notify modal-info" role="document">
-                    <!--Content-->
-                    <div class="modal-content text-center">
-                        <!--Header-->
-                        <div class="modal-header d-flex justify-content-center">
-                            <p class="heading">Consulta de glicose</p>
-                        </div>
-
-                        <!--Body-->
-                        <div class="modal-body">
-
-                            <i class="fas fa-heart fa-4x animated rotateIn mb-4"></i>
-
-                            <p>Muito bem, estamos aqui sempre que precisar!</p>
-
-                        </div>
-
-                        <!--Footer-->
-                        <div class="modal-footer flex-center">
-                            <button type="button" class="btn btn-info waves-effect"
-                                data-dismiss="modal">Ok</button>
-                        </div>
-                    </div>
-                    <!--/.Content-->
-                </div>
-            </div>
-            <!--Modal 1-2-->
-            <!--Modal 2-->
-            <div class="modal fade" id="nivel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-notify modal-info" role="document">
-                    <!--Content-->
-                    <div class="modal-content text-center">
-                        <!--Header-->
-                        <div class="modal-header d-flex justify-content-center">
-                            <p class="heading">Consulta de glicose</p>
-                        </div>
-
-                        <!--Body-->
-                        <div class="modal-body">
-
-                            <i class="fas fa-heartbeat fa-4x animated rotateIn mb-4"></i>
-
-                            <p>Qual seu nivel de glicose?</p>
-
-                        </div>
-
-                        <!-- input Nivel de glicose -->
-
-                        <div class="form-group">
-                            <label for="nivelGlicose">Escreva seu nivel de glicose</label>
-                            <input type="number" name="nivelGli" min="1" max="500">
-                        </div>
-
-                        <!--Footer-->
-                        <div class="modal-footer flex-center">
-                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#resultado"
-                                data-dismiss="modal">Enviar</button>
-                            <button type="button" class="btn btn-outline-info waves-effect"
-                                data-dismiss="modal">Fechar</button>
-                        </div>
-                    </div>
-                    <!--/.Content-->
-                </div>
-            </div>
-            <!--Modal 2-->
-            <!--Modal 3-->
-            <div class="modal fade" id="resultado" tabindex="-1" role="dialog" aria-labelledby="Resultado"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-notify modal-info" role="document">
-                    <!--Content-->
-                    <div class="modal-content text-center">
-                        <!--Header-->
-                        <div class="modal-header d-flex justify-content-center">
-                            <p class="heading">Consulta de glicose</p>
-                        </div>
-
-                        <!--Body-->
-                        <div class="modal-body">
-
-                            <i class="fas fa-clock fa-4x animated rotateIn mb-4"></i>
-
-                            <p>*Resultado*</p>
-
-                        </div>
-
-                        <!--Footer-->
-                        <div class="modal-footer flex-center">
-                            <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Ok</button>
-                        </div>
-                    </div>
-                    <!--/.Content-->
-                </div>
-            </div>
-            <!--Modal 3-->
         </div>
-    </div>
+    </section>
+
+    <!--footer-->
+    <footer id="footer" class="page-footer font-large blue pt-4">
+
+        <div class="container-fluid justify-content-center" id="redesociais">
+            <div class="social-link">
+                <a href="#" class="twitter"><i class="fab fa-twitter fa-lg"></i></a>
+                <a href="#" class="facebook"><i class="fab fa-facebook fa-lg"></i></a>
+                <a href="#" class="instagram"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="#" class="linkedin"><i class="fab fa-linkedin fa-lg"></i></a>
+            </div>
+        </div>
+
+        
+    </footer>
+    <!--footer end-->
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
 
 </body>
 
