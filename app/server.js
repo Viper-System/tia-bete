@@ -6,6 +6,8 @@ const app = express();
 const port = 3000
 const ip = 'localhost';
 
+app.use(express.static('public'))
+
 
 // BODY-PARSER PROPS
 app.use(bodyParser.urlencoded({extended: false}))
@@ -14,9 +16,10 @@ app.use(bodyParser.json())
 
 // EXPRESS GETS e POSTS
 //Mostrar page - HOME
-app.get("/home", function(req, res) {
+app.get("/", function(req, res) {
 
-    res.sendFile(__dirname + '/public/index.html')
+    res.sendFile(__dirname + '/public/index.html');
+    res.sendFile(__dirname + '/public/index.css');
 
 });
 
