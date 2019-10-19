@@ -19,7 +19,7 @@
 
 
 
-    <title>Tia Bete</title>
+    <title>Diabetz</title>
 </head>
 
 <body>
@@ -47,7 +47,7 @@
             </div>
             <div class="topnav" id="myTopnav">
                 <a class="nav-link active" href="#"><i class="far fa-user"></i> Tia Beth </a>
-                <a class="nav-link" href="#"><i class="far fa-plus-square"></i> Centros de Saúde</a>
+                <a class="nav-link" href="./centro.html"><i class="far fa-plus-square"></i> Centros de Saúde</a>
                 <a class="nav-link" href="#"><i class="fas fa-info"></i> Informações</a>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                     <i class="fa fa-bars"></i></a>
@@ -155,13 +155,13 @@
 
                                     <div class="form-group">
                                         <label for="nivelGlicose">Escreva seu nivel de glicose</label>
-                                        <input type="number" name="nivelGli" id="nivelGli" min="1" max="500">
+                                        <input type="number" name="nivelGli" id="valorGli" min="1" max="500">
                                     </div>
 
                                     <!--Footer-->
                                     <div class="modal-footer flex-center">
-                                        <button type="button" class="btn btn-primary" data-toggle="modal"
-                                            data-target="#resultado" data-dismiss="modal">Enviar</button>
+                                        <button type="submit" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#resultado" data-dismiss="modal" onclick="capturar()">Enviar</button>
                                         <button type="button" class="btn btn-outline-info waves-effect"
                                             data-dismiss="modal">Fechar</button>
                                     </div>
@@ -171,7 +171,7 @@
                         </div>
                         <!--Modal 2-->
                         <!--Modal 3-->
-                        <div class="modal fade" id="resultado" tabindex="-1" role="dialog" aria-labelledby="Resultado"
+                        <div class="modal fade" id="resul" tabindex="-1" role="dialog" aria-labelledby="Resultado"
                             aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered modal-notify modal-info" role="document">
                                 <!--Content-->
@@ -186,13 +186,14 @@
 
                                         <i class="fas fa-clock fa-4x animated rotateIn mb-4"></i>
 
-                                        <p>*Resultado*</p>
+                                        <p>Você precisa tomar:<p id="resultado"> Unidade(s) de Insulina</p></p>
+                                        
 
                                     </div>
 
                                     <!--Footer-->
                                     <div class="modal-footer flex-center">
-                                        <button type="button" class="btn btn-primary waves-effect"
+                                        <button type="button" class="btn btn-primary waves-effect" id="btnn"
                                             data-dismiss="modal">Ok</button>
                                     </div>
                                 </div>
@@ -231,6 +232,30 @@
                 x.className = "topnav";
             }
         }
+
+        var capturando = "";
+        var carbo = 30;
+        var resultado = "";
+
+       function capturar() {
+
+        capturando = document.getElementById('valorGli').value;
+
+        resultado = capturando / carbo;
+        
+        var result = Math.round(resultado)
+
+        $('#resul').modal('show')
+
+       document.getElementById('resultado').innerHTML = result;
+
+       } 
+
+       document.getElementById("btnn").addEventListener("click", function(){
+        window.location.reload()
+    });
+
+
     </script>
 
 </body>

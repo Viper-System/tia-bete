@@ -16,49 +16,16 @@ app.use(bodyParser.json())
 
 // EXPRESS GETS e POSTS
 //Mostrar page - HOME
-app.get("/", function(req, res) {
-
+app.get("/", (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
-    res.sendFile(__dirname + '/public/index.css');
-
+    res.sendFile(__dirname + '/public/index.css');    
 });
-
-//Mostrar page - INFORMAÇÕES
-app.get("/info", function(req, res) {
-
-    res.sendFile(__dirname + '/public/info.html')
-
-});
-
-//Rota que calcula a Glicose com Carboidrato e retorna o valor da Insulina
-app.post("/calc", function(req, res) {
-
-    var glico = req.body.glicose;
-    var carbo = req.body.carboidratos;
-    
-    var insulina;
-    
-    insulina = glico / carbo;
-
-    var resultado = Math.round(insulina)
-
-        if (resultado > 10) {
-            res.send(`Vá em um posto médico!`)
-        } else {
-            res.send('<h1>'+resultado+"<h1>")
-        }       
-
-})
-
 
 
 //Mostrar page - DISPONIBILIDADE DE CENTROS DE SAÚDE
-app.get("/dispo", function(req, res) {
-
-    res.sendFile(__dirname + '/public/dispo.html')
-
+app.get("/centro", (req, res) =>{
+    res.sendFile(__dirname + '/public/centro.html')   
 });
-
 
 
 
@@ -75,17 +42,3 @@ app.listen(port, ip, () => {
     console.log("■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■")
 
 })
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
