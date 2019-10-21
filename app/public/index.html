@@ -7,23 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="index.css">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Pacifico&display=swap" rel="stylesheet">
-
-    <!--Font Awesome-->
-    <script src="https://kit.fontawesome.com/9546f2c0d7.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-
-    <title>Diabetz</title>
-</head>
-
-<body>
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -36,22 +19,44 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
 
-    <!--Header-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Pacifico&display=swap" rel="stylesheet">
 
+    <link href="theme.css" rel="stylesheet">
+
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/9546f2c0d7.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Diabetz</title>
+</head>
+
+<body>
+
+    <!--Header-->
     <header id="header">
-        <div class="container" id="cabecalho">
-            <div id="logo">
-                <h1 style="
-                    font-family: 'Pacifico', cursive;
-                "><a style="text-decoration: none; color: #fff" href="#home">Diabetz</a></h1>
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
+
+            <a class="navbar-brand" href="index.html"><img src="assets/img/Final Marca.png" width="100" height="50"></a>
+
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapse_target">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-info"></i> Informações</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./centro.html"><i class="far fa-plus-square"></i> Centros de Saúde</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="far fa-user"></i> Tia Bete </a>
+                    </li>
+                </ul>
             </div>
-            <div class="topnav" id="myTopnav">
-                <a class="nav-link active" href="#"><i class="far fa-user"></i> Tia Beth </a>
-                <a class="nav-link" href="./centro.html"><i class="far fa-plus-square"></i> Centros de Saúde</a>
-                <a class="nav-link" href="#"><i class="fas fa-info"></i> Informações</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i></a>
-            </div>
+        </nav>
+        </div>
     </header><!-- #header -->
 
     <section id="hero">
@@ -63,9 +68,9 @@
 
                         <!-- Button trigger modal-->
 
-                        <h1 class="display-4" style="font-family: 'Pacifico', cursive; ">Começar a consulta</h1>
+                        <h1 class="display-4" style="font-family: 'Pacifico', cursive;">Começar a consulta</h1>
                         <h2 class="lead">Aqui será feita a consulta de glicose</h2>
-                        <button type="button" class="btn btn-outline-primary btn-lg" data-toggle="modal"
+                        <button type="button" class="btn btn-secondary" data-toggle="modal"
                             data-target="#glicose">Consulta</button>
 
 
@@ -93,7 +98,7 @@
                                     <div class="modal-footer flex-center">
                                         <button type="button" class="btn btn-primary" data-toggle="modal"
                                             data-target="#nivel" data-dismiss="modal">Não</button>
-                                        <button type="button" class="btn btn-outline-info" data-toggle="modal"
+                                        <button type="button" class="btn btn-secondary" data-toggle="modal"
                                             data-target="#glicose-sim" data-dismiss="modal">Sim</button>
                                     </div>
                                 </div>
@@ -161,8 +166,9 @@
                                     <!--Footer-->
                                     <div class="modal-footer flex-center">
                                         <button type="submit" class="btn btn-primary" data-toggle="modal"
-                                            data-target="#resultado" data-dismiss="modal" onclick="capturar()">Enviar</button>
-                                        <button type="button" class="btn btn-outline-info waves-effect"
+                                            data-target="#resultado" data-dismiss="modal"
+                                            onclick="capturar()">Enviar</button>
+                                        <button type="button" class="btn btn-secondary waves-effect"
                                             data-dismiss="modal">Fechar</button>
                                     </div>
                                 </div>
@@ -186,8 +192,9 @@
 
                                         <i class="fas fa-clock fa-4x animated rotateIn mb-4"></i>
 
-                                        <p>Você precisa tomar:<p id="resultado"> Unidade(s) de Insulina</p></p>
-                                        
+                                        <p>Você precisa tomar:<p id="resultado"> Unidade(s) de Insulina</p>
+                                        </p>
+
 
                                     </div>
 
@@ -219,43 +226,32 @@
             </div>
         </div>
 
-        
+
     </footer>
     <!--footer end-->
 
     <script>
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
-        }
-
         var capturando = "";
         var carbo = 30;
         var resultado = "";
 
-       function capturar() {
+        function capturar() {
 
-        capturando = document.getElementById('valorGli').value;
+            capturando = document.getElementById('valorGli').value;
 
-        resultado = capturando / carbo;
-        
-        var result = Math.round(resultado)
+            resultado = capturando / carbo;
 
-        $('#resul').modal('show')
+            var result = Math.round(resultado)
 
-       document.getElementById('resultado').innerHTML = result;
+            $('#resul').modal('show')
 
-       } 
+            document.getElementById('resultado').innerHTML = result;
 
-       document.getElementById("btnn").addEventListener("click", function(){
-        window.location.reload()
-    });
+        }
 
-
+        document.getElementById("btnn").addEventListener("click", function () {
+            window.location.reload()
+        });
     </script>
 
 </body>
