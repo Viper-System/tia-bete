@@ -10,8 +10,7 @@ Commits:
 
 **12/09/2019** => Tela inicial com configurações na PopUp.
 
-
-
+**24/10/2019** => Navbar foi alterada e adicionado bootstrap customizado para se adaptar a nova logo.
 
 ## Lado Servidor
 
