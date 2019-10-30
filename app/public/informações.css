@@ -23,12 +23,6 @@ p {
 }
 */
 
-#info {
-    text-align: center;
-    margin-left: 400px;
-    margin-right: 400px;
-    text-align: justify;
-}
 
 h1,
 h2,
@@ -76,3 +70,22 @@ h6 {
         font-size: 18px;
     }
 }
+
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {  
+    .class-name {font-size: 16px;}
+  }
+
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {  
+    .class-name {font-size: 30px;}
+  }
+
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) { 
+    .class-name {font-size: 40px;}
+
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {  
+    .class-name {font-size: 48px;}
+  }
