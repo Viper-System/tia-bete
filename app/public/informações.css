@@ -1,0 +1,91 @@
+body {
+    background-color: #8FB9C9;
+    font-family: "Open Sans", sans-serif;
+}
+
+/*
+text {
+    padding: 0;
+    margin: 0 0 30px 0;
+    color: #05445E;
+    text-align: ;
+    width: 100%;
+    left: 40%;
+    position: left;
+    text-align: left;
+    font-size: 20px;
+}*/
+/*
+p {
+    font-family: Georgia;
+    font-size: 20px;
+    line-height: 1.50;
+}
+*/
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    padding: 0;
+    color: #05445E;
+}
+
+
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    padding-top: 0 !important;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #05445E;
+    color: #2980b9;
+    text-align: center;
+}
+
+.twitter,
+.facebook,
+.instagram,
+.linkedin {
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {  
+    .class-name {font-size: 16px;}
+  }
+
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {  
+    .class-name {font-size: 30px;}
+  }
+
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) { 
+    .class-name {font-size: 40px;}
+
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {  
+    .class-name {font-size: 48px;}
+  }
