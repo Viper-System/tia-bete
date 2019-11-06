@@ -1,27 +1,35 @@
-body {
-    background-color: #8FB9C9;
-    font-family: "Open Sans", sans-serif;
+.container-fluid {
+    margin-top: 0px;
 }
 
-/*
-text {
-    padding: 0;
-    margin: 0 0 30px 0;
-    color: #05445E;
-    text-align: ;
+.wrapper {
+    min-height: 100vh;
+    max-height: 100%;
+}
+
+main {
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+
+
+
+
+#info {
+    color: #505253;
+    text-align: center;
     width: 100%;
-    left: 40%;
-    position: left;
-    text-align: left;
     font-size: 20px;
-}*/
-/*
+    
+}
+
 p {
     font-family: Georgia;
     font-size: 20px;
     line-height: 1.50;
+    text-align: center;
 }
-*/
 
 
 h1,
@@ -31,7 +39,7 @@ h4,
 h5,
 h6 {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+    font-weight: 400px;
     margin: 0 0 20px 0;
     padding: 0;
     color: #05445E;
@@ -40,10 +48,8 @@ h6 {
 
 #footer {
     display: flex;
-    align-items: center;
     justify-content: center;
     height: 3em;
-    padding-top: 0 !important;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -61,31 +67,40 @@ h6 {
     align-items: center;
 }
 
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
+
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {
+    .class-name {
+        font-size: 16px;
     }
 
-    .sidenav a {
-        font-size: 18px;
+    .infonav {
+        display: none;
     }
 }
 
-/* Small devices (landscape phones, 544px and up) */
-@media (min-width: 544px) {  
-    .class-name {font-size: 16px;}
-  }
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .class-name {
+        font-size: 30px;
+    }
 
-  /* Medium devices (tablets, 768px and up) */
-  @media (min-width: 768px) {  
-    .class-name {font-size: 30px;}
-  }
+    .infonav {
+        display: none;
+    }
+}
 
-  /* Large devices (desktops, 992px and up) */
-  @media (min-width: 992px) { 
-    .class-name {font-size: 40px;}
 
-  /* Extra large devices (large desktops, 1200px and up) */
-  @media (min-width: 1200px) {  
-    .class-name {font-size: 48px;}
-  }
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .class-name {
+        font-size: 40px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .class-name {
+        font-size: 48px;
+    }
+}
