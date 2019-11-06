@@ -27,16 +27,20 @@
     <script src="https://kit.fontawesome.com/9546f2c0d7.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" />
     <title>Diabetz - Informações</title>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#info">
 
     <!--Header-->
     <header id="header">
         <nav class="navbar navbar-expand-md navbar-dark bg-primary">
-
-            <a class="navbar-brand" href="index.html"><img src="assets/img/Final Marca.png" width="100" height="50"></a>
+            <div class="left-content">
+                <a class="navbar-brand" href="index.html"><img src="assets/img/Final Marca.png" width="100" height="50">
+                </a>
+                <a></a>
+            </div>
 
             <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
                 <span class="navbar-toggler-icon"></span>
@@ -45,13 +49,13 @@
             <div class="collapse navbar-collapse" id="collapse_target">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="./informações.html"><i class="fas fa-info"></i> Informações</a>
+                        <a class="nav-link active" href="./informações.html"><i class="fas fa-info"></i> Informações</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./centro.html"><i class="far fa-plus-square"></i> Centros de Saúde</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#"><i class="far fa-user"></i> Tia Bete </a>
+                        <a class="nav-link" href="./colab.html"><i class="far fa-user"></i> Colaboração </a>
                     </li>
                 </ul>
             </div>
@@ -59,13 +63,30 @@
         </div>
     </header><!-- #header -->
 
+    <!--Navbar
+    <nav class="navbar text-justify" id="infonav">
+        <a class="navbar-brand" href="#"></a>
+        <nav class="nav nav-pills flex-column text-justify">
+            <a class="nav-link" href="#item-1">Item 1</a>
+            <a class="nav-link" href="#item-2">Item 2</a>
+            <a class="nav-link" href="#item-3">Item 3</a>
+            <a class="nav-link" href="#item-4">Item 4</a>
+            <a class="nav-link" href="#item-5">Item 5</a>
+            <a class="nav-link" href="#item-6">Item 6</a>
+        </nav>
+    </nav>
+    </div>
+    </div>
+    fim Navbar-->
+
 
     <!--Informações-->
-    <div class="jumbotron" id="info" style="background-color: #fff; margin-top: 10px;">
+    <div class="container-fluid" id="info" style="background-color:#fff;">
         <div class="row">
             <div class="col">
-                <h4>O que é diabetes?</h4>
-                <p class="text-justify"> Diabetes é uma doença causada pela produção insuficiente ou
+                <br>
+                <h4 id="item-1">1 - O que é diabetes?</h4>
+                <p class="text-justify" style="text-align:inherit;">Diabetes é uma doença causada pela produção insuficiente ou
                     má absorção de insulina, hormônio que regula a glicose no
                     sangue e garante energia para o organismo.
 
@@ -75,7 +96,8 @@
 
                     O diabetes pode causar o aumento da glicemia e as altas taxas podem levar a complicações no
                     coração,
-                    nas artérias, nos olhos, nos rins e nos nervos. Em casos mais graves, o diabetes pode levar à
+                    nas artérias, nos olhos, nos rins e nos nervos. Em casos mais graves, o diabetes pode levar
+                    à
                     morte.
 
 
@@ -91,14 +113,17 @@
                     câncer.
 
 
-                    A causa do tipo de diabetes ainda é desconhecida e a melhor forma de preveni-la é com práticas
+                    A causa do tipo de diabetes ainda é desconhecida e a melhor forma de preveni-la é com
+                    práticas
                     de
-                    vida saudáveis (alimentação, atividades físicas e evitando álcool, tabaco e outras drogas).</p>
+                    vida saudáveis (alimentação, atividades físicas e evitando álcool, tabaco e outras drogas).
+                </p>
             </div>
 
             <div class="col">
-                <h4>Quais os tipos mais comuns de diabetes?</h4>
-                <p class="text-justify"> O diabetes mellitus pode se apresentar de diversas formas e possui diversos
+                <h4 id="item-2">2 - Quais os tipos mais comuns de diabetes?</h4>
+                <p class="text-justify"> O diabetes mellitus pode se apresentar de diversas formas e possui
+                    diversos
                     tipos
                     diferentes.
                     Independente do tipo de diabetes, com aparecimento de qualquer sintoma é fundamental que o
@@ -107,30 +132,35 @@
             </div>
 
             <div class="col">
-                <h4>O que é diabetes tipo 1?</h4>
+                <h4 id="item-3">3 - O que é diabetes tipo 1?</h4>
                 <p class="text-justify">Sabe-se que, via de regra, é uma doença crônica não transmissível,
                     hereditária, que
                     concentra entre
-                    5% e 10% do total de diabéticos no Brasil. Cerca de 90% dos pacientes diabéticos no Brasil têm
+                    5% e 10% do total de diabéticos no Brasil. Cerca de 90% dos pacientes diabéticos no Brasil
+                    têm
                     esse
                     tipo. Ele se manifesta mais frequentemente em adultos, mas crianças também podem apresentar.
 
-                    O diabetes tipo 1 aparece geralmente na infância ou adolescência, mas pode ser diagnosticado em
+                    O diabetes tipo 1 aparece geralmente na infância ou adolescência, mas pode ser diagnosticado
+                    em
                     adultos também. Pessoas com parentes próximos que têm ou tiveram a doença devem fazer exames
                     regularmente para acompanhar a glicose no sangue.
 
-                    Dependendo da gravidade, pode ser controlado com atividade física e planejamento alimentar. Em
+                    Dependendo da gravidade, pode ser controlado com atividade física e planejamento alimentar.
+                    Em
                     outros
-                    casos, exige o uso de insulina e/ou outros medicamentos para controlar a glicose. Nesses casos,
+                    casos, exige o uso de insulina e/ou outros medicamentos para controlar a glicose. Nesses
+                    casos,
                     é
                     necessário administrar insulina diariamente para regular a quantidade de glicose no sangue.
 
-                    A causa do diabetes tipo 1 ainda é desconhecida e a melhor forma de preveni-la é com práticas de
+                    A causa do diabetes tipo 1 ainda é desconhecida e a melhor forma de preveni-la é com
+                    práticas de
                     vida
                     saudáveis (alimentação, atividades físicas e evitando álcool, tabaco e outras drogas).</p>
             </div>
             <div class="col">
-                <h4>O que é diabetes tipo 2?</h4>
+                <h4 id="item-4">4 - O que é diabetes tipo 2?</h4>
                 <p class="text-justify">O diabetes tipo 2 ocorre quando o corpo não aproveita adequadamente a
                     insulina
                     produzida. A causa do
@@ -138,7 +168,8 @@
                     elevados,
                     hipertensão.e hábitos alimentares inadequados.
 
-                    Por isso, é essencial manter acompanhamento médico para tratar, também, dessas outras doenças,
+                    Por isso, é essencial manter acompanhamento médico para tratar, também, dessas outras
+                    doenças,
                     que
                     podem aparecer junto com o diabetes.
 
@@ -151,14 +182,17 @@
             </div>
 
             <div class="col">
-                <h4 class="Display">O que é o pré-diabetes?</h4>
-                <p class="text-justify">Pré-diabetes é quando os níveis de glicose no sangue estão mais altos do que
+                <h4 id="item-5">5 - O que é o pré-diabetes?</h4>
+                <p class="text-justify">Pré-diabetes é quando os níveis de glicose no sangue estão mais altos do
+                    que
                     o
                     normal,
                     mas ainda não
-                    estão elevados o suficiente para caracterizar um Diabetes Tipo 1 ou Tipo 2. É um sinal de alerta
+                    estão elevados o suficiente para caracterizar um Diabetes Tipo 1 ou Tipo 2. É um sinal de
+                    alerta
                     do
-                    corpo, que normalmente aparece em obesos, hipertensos e/ou pessoas com alterações nos lipídios.
+                    corpo, que normalmente aparece em obesos, hipertensos e/ou pessoas com alterações nos
+                    lipídios.
 
                     Esse alerta do corpo é importante por ser a única etapa do diabetes que ainda pode ser
                     revertida,
@@ -174,7 +208,7 @@
             </div>
 
             <div class="col">
-                <h4>O que é diabetes gestacional?</h4>
+                <h4 id="item-6"> 6 - O que é diabetes gestacional?</h4>
                 <p class="text-justify">Ocorre temporariamente durante a gravidez. As taxas de açúcar no sangue
                     ficam acima
                     do
@@ -184,47 +218,16 @@
         </div>
     </div>
 
-    <form>
-
+    
         <!--footer-->
-        <footer id="footer" class="page-footer font-large blue pt-4" style="margin-bottom: 0px;">
 
-            <div class="container-fluid justify-content-center" id="redesociais">
-                <div class="social-link">
-                    <a href="#" class="twitter"><i class="fab fa-twitter fa-lg"></i></a>
+        <footer id="footer" class="page-footer font-large blue pt-4">
+
+                <div class="container-fluid justify-content-center social-link" id="redesociais">
                     <a href="#" class="facebook"><i class="fab fa-facebook fa-lg"></i></a>
                     <a href="#" class="instagram"><i class="fab fa-instagram fa-lg"></i></a>
                     <a href="#" class="linkedin"><i class="fab fa-linkedin fa-lg"></i></a>
-                </div>
-            </div>
-
-
-        </footer>
-        <!--footer end-->
-
-        <script>
-            var capturando = "";
-            var carbo = 30;
-            var resultado = "";
-
-            function capturar() {
-
-                capturando = document.getElementById('valorGli').value;
-
-                resultado = capturando / carbo;
-
-                var result = Math.round(resultado)
-
-                $('#resul').modal('show')
-
-                document.getElementById('resultado').innerHTML = result;
-
-            }
-
-            document.getElementById("btnn").addEventListener("click", function () {
-                window.location.reload()
-            });
-        </script>
+                </div>  
 
 </body>
 

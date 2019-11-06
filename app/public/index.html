@@ -27,6 +27,7 @@
     <script src="https://kit.fontawesome.com/9546f2c0d7.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" />
     <title>Diabetz</title>
 </head>
 
@@ -51,7 +52,7 @@
                         <a class="nav-link" href="./centro.html"><i class="far fa-plus-square"></i> Centros de Saúde</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#"><i class="far fa-user"></i> Tia Bete </a>
+                        <a class="nav-link" href="./colab.html"><i class="far fa-user"></i> Colaboração </a>
                     </li>
                 </ul>
             </div>
@@ -163,10 +164,19 @@
                                         <input type="number" name="nivelGli" id="valorGli" min="1" max="500">
                                     </div>
 
+                                    <div class="modal-body">
+                                        <p>Qual seu nivel de carboidratos?</p>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="nivelCarboidratos">Escreva seu nivel de carboidratos</label>
+                                        <input type="number" name="nivelCarb" id="valorCarb" min="1" max="500">
+                                    </div>
+
                                     <!--Footer-->
                                     <div class="modal-footer flex-center">
                                         <button type="submit" class="btn btn-primary" data-toggle="modal"
-                                            data-target="#resultado" data-dismiss="modal"
+                                            data-target="#resul" data-dismiss="modal"
                                             onclick="capturar()">Enviar</button>
                                         <button type="button" class="btn btn-secondary waves-effect"
                                             data-dismiss="modal">Fechar</button>
@@ -192,9 +202,17 @@
 
                                         <i class="fas fa-clock fa-4x animated rotateIn mb-4"></i>
 
-                                        <p>Você precisa tomar:<p id="resultado"> <p> Unidade(s) de Insulina</p>
-                                        </p>
-
+                                        <p>Unidades de Insulina para Diabeticos Regular:<p id="resultado">
+                                                <p> U.I.</p>
+                                            </p>
+                                            <hr>
+                                            <p>Unidades de Insulina para Diabeticos Resistentes:<p id="resultadoIR">
+                                                    <p> U.I.</p>
+                                                </p>
+                                                <hr>
+                                                <p>Unidades de Insulina para Diabeticos Sensiveis:<p id="resultadoIS">
+                                                        <p> U.I.</p>
+                                                    </p>
 
                                     </div>
 
@@ -219,7 +237,6 @@
 
         <div class="container-fluid justify-content-center" id="redesociais">
             <div class="social-link">
-                <a href="#" class="twitter"><i class="fab fa-twitter fa-lg"></i></a>
                 <a href="#" class="facebook"><i class="fab fa-facebook fa-lg"></i></a>
                 <a href="#" class="instagram"><i class="fab fa-instagram fa-lg"></i></a>
                 <a href="#" class="linkedin"><i class="fab fa-linkedin fa-lg"></i></a>
@@ -231,107 +248,135 @@
     <!--footer end-->
 
     <script>
-
-
-
         var glicemia = "";
         var carbo = "";
         var resultado, resultadoIR, resultadoIS = "";
         var normalResult = "Está tudo bem!"
+
+        var rr, rir, ris;
 
         function capturar() {
 
             glicemia = document.getElementById('valorGli').value;
             carbo = document.getElementById('valorCarb').value;
 
-            
-           
-            if (glicemia <= 139) {   
 
-                    $('#resul').modal('show')
-                    document.getElementById('resultado').innerHTML = normalResult
 
-            } else if (glicemia > 140  && glicemia <= 180) { 
+            if (glicemia <= 139) {
 
-                    resultado = glicemia / carbo;   
-                    resultadoIR = ((glicemia / carbo + (glicemia * 10) / 22.5) / 10) 
-                    resultadoIS = (((glicemia/10) / 2) - (glicemia / carbo))
-                    
-                    $('#resul').modal('show')
-                    document.getElementById('resultado').innerHTML = resultado;
-                    document.getElementById('resultadoIR').innerHTML = resultadoIR;
-                    document.getElementById('resultadoIS').innerHTML = resultadoIS;
+                $('#resul').modal('show')
+                document.getElementById('resultado').innerHTML = normalResult
 
-            } else if (glicemia >= 181 && glicemia <= 220) {  
+            } else if (glicemia > 140 && glicemia <= 180) {
 
-                    resultado = glicemia / carbo; 
-                    resultadoIR = (glicemia / carbo + (glicemia * 10) / 22.5) / 10 
-                    resultadoIS = (((glicemia/10) / 2) - (glicemia / carbo))
+                resultado = glicemia / carbo;
+                resultadoIR = ((glicemia / carbo + (glicemia * 10) / 22.5) / 10)
+                resultadoIS = (((glicemia / 10) / 2) - (glicemia / carbo))
 
-                    $('#resul').modal('show')
-                    document.getElementById('resultado').innerHTML = resultado;                       
-                    document.getElementById('resultadoIR').innerHTML = resultadoIR;
-                    document.getElementById('resultadoIS').innerHTML = resultadoIS;            
+                rr  = Math.round(resultado)
+                rir = Math.round(resultadoIR) 
+                ris = Math.round(resultadoIS)
 
-            } else if (glicemia >= 221 && glicemia <= 260) {   
+                $('#resul').modal('show')
+                document.getElementById('resultado').innerHTML = rr;
+                document.getElementById('resultadoIR').innerHTML = rir;
+                document.getElementById('resultadoIS').innerHTML = ris;
 
-                    resultado = glicemia / carbo;   
-                    resultadoIR = (glicemia / carbo + (glicemia * 10) / 22.5) / 10 
-                    resultadoIS = (((glicemia/10) / 2) - (glicemia / carbo))
+            } else if (glicemia >= 181 && glicemia <= 220) {
 
-                    $('#resul').modal('show')
-                    document.getElementById('resultado').innerHTML = resultado;
-                    document.getElementById('resultadoIR').innerHTML = resultadoIR;
-                    document.getElementById('resultadoIS').innerHTML = resultadoIS;                
+                resultado = glicemia / carbo;
+                resultadoIR = (glicemia / carbo + (glicemia * 10) / 22.5) / 10
+                resultadoIS = (((glicemia / 10) / 2) - (glicemia / carbo))
+
+              
+                rr  = Math.round(resultado)
+                rir = Math.round(resultadoIR) 
+                ris = Math.round(resultadoIS)
+
+                $('#resul').modal('show')
+                document.getElementById('resultado').innerHTML = rr;
+                document.getElementById('resultadoIR').innerHTML = rir;
+                document.getElementById('resultadoIS').innerHTML = ris;
+
+            } else if (glicemia >= 221 && glicemia <= 260) {
+
+                resultado = glicemia / carbo;
+                resultadoIR = (glicemia / carbo + (glicemia * 10) / 22.5) / 10
+                resultadoIS = (((glicemia / 10) / 2) - (glicemia / carbo))
+
+                rr  = Math.round(resultado)
+                rir = Math.round(resultadoIR) 
+                ris = Math.round(resultadoIS)
+
+                $('#resul').modal('show')
+                document.getElementById('resultado').innerHTML = rr;
+                document.getElementById('resultadoIR').innerHTML = rir;
+                document.getElementById('resultadoIS').innerHTML = ris;
 
             } else if (glicemia >= 261 && glicemia <= 300) {
 
-                    resultado = glicemia / carbo; 
-                    resultadoIR = (glicemia / carbo + (glicemia * 10) / 22.5) / 10 
-                    resultadoIS = (((glicemia/10) / 2) - (glicemia / carbo))
+                resultado = glicemia / carbo;
+                resultadoIR = (glicemia / carbo + (glicemia * 10) / 22.5) / 10
+                resultadoIS = (((glicemia / 10) / 2) - (glicemia / carbo))
 
-                    $('#resul').modal('show')
-                    document.getElementById('resultado').innerHTML = resultado;  
-                    document.getElementById('resultadoIR').innerHTML = resultadoIR;
-                    document.getElementById('resultadoIS').innerHTML = resultadoIS;  
+                rr  = Math.round(resultado)
+                rir = Math.round(resultadoIR) 
+                ris = Math.round(resultadoIS)
+
+                $('#resul').modal('show')
+                document.getElementById('resultado').innerHTML = rr;
+                document.getElementById('resultadoIR').innerHTML = rir;
+                document.getElementById('resultadoIS').innerHTML = ris;
 
             } else if (glicemia > 301 && glicemia <= 350) {
 
-                    resultado = glicemia / carbo;  
-                    resultadoIR = (glicemia / carbo + (glicemia * 10) / 22.5) / 10 
-                    resultadoIS = (((glicemia/10) / 2) - (glicemia / carbo))
+                resultado = glicemia / carbo;
+                resultadoIR = (glicemia / carbo + (glicemia * 10) / 22.5) / 10
+                resultadoIS = (((glicemia / 10) / 2) - (glicemia / carbo))
 
-                    $('#resul').modal('show')
-                    document.getElementById('resultado').innerHTML = resultado; 
-                    document.getElementById('resultadoIR').innerHTML = resultadoIR;
-                    document.getElementById('resultadoIS').innerHTML = resultadoIS;           
+                rr  = Math.round(resultado)
+                rir = Math.round(resultadoIR) 
+                ris = Math.round(resultadoIS)
+
+                $('#resul').modal('show')
+                document.getElementById('resultado').innerHTML = rr;
+                document.getElementById('resultadoIR').innerHTML = rir;
+                document.getElementById('resultadoIS').innerHTML = ris;
 
             } else if (glicemia > 351 && glicemia && 400) {
 
-                    resultado = glicemia / carbo;
-                    resultadoIR = (glicemia / carbo + (glicemia * 10) / 22.5) / 10 
-                    resultadoIS = (((glicemia/10) / 2) - (glicemia / carbo))
+                resultado = glicemia / carbo;
+                resultadoIR = (glicemia / carbo + (glicemia * 10) / 22.5) / 10
+                resultadoIS = (((glicemia / 10) / 2) - (glicemia / carbo))
 
-                    $('#resul').modal('show')
-                    document.getElementById('resultado').innerHTML = resultado;  
-                    document.getElementById('resultadoIR').innerHTML = resultadoIR;
-                    document.getElementById('resultadoIS').innerHTML = resultadoIS;       
+                rr  = Math.round(resultado)
+                rir = Math.round(resultadoIR) 
+                ris = Math.round(resultadoIS)
+
+                $('#resul').modal('show')
+                document.getElementById('resultado').innerHTML = rr;
+                document.getElementById('resultadoIR').innerHTML = rir;
+                document.getElementById('resultadoIS').innerHTML = ris;
 
             } else if (glicemia > 401) {
 
-                    resultado   = glicemia / carbo;  
-                    resultadoIR = (glicemia / carbo + (glicemia * 10) / 22.5) / 10 
-                    resultadoIS = (((glicemia/10) / 2) - (glicemia / carbo))
+                resultado = glicemia / carbo;
+                resultadoIR = (glicemia / carbo + (glicemia * 10) / 22.5) / 10
+                resultadoIS = (((glicemia / 10) / 2) - (glicemia / carbo))
 
-                    $('#resul').modal('show')
-                    document.getElementById('resultado').innerHTML = resultado;  
-                    document.getElementById('resultadoIR').innerHTML = resultadoIR;
-                    document.getElementById('resultadoIS').innerHTML = resultadoIS;              
+                rr  = Math.round(resultado)
+                rir = Math.round(resultadoIR) 
+                ris = Math.round(resultadoIS)
 
-            } 
+                $('#resul').modal('show')
+                document.getElementById('resultado').innerHTML = rr;
+                document.getElementById('resultadoIR').innerHTML = rir;
+                document.getElementById('resultadoIS').innerHTML = ris;
+
+            }
 
 
-            
+
 
             /*
             $('#resul').modal('show')
@@ -343,12 +388,12 @@
             window.location.reload()
         });
 
-    
-/*
-    setInterval( function() {
-  $('#glicose').modal('show')  
-}, 10000 );
-*/
+
+        /*
+            setInterval( function() {
+          $('#glicose').modal('show')  
+        }, 10000 );
+        */
 
     </script>
 </body>
