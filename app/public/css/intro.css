@@ -1,0 +1,23 @@
+body {
+    position: relative;
+  }
+  ul.nav-pills {
+    top: 300px;
+    position: fixed;
+  }
+  div.col-8 div {
+    height: 40em;
+    }
+
+  #cads {
+    background-color: rgba(2,157,194,1);
+    
+  }
+
+
+
+#info {
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(3,23,56,1) 12%, rgba(4,39,69,1) 21%, rgba(5,68,94,1) 36%, rgba(4,88,116,1) 53%, rgba(4,106,136,1) 69%, rgba(2,157,194,1) 100%, rgba(0,212,255,1) 100%);
+  
+}
+

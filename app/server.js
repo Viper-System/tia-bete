@@ -13,12 +13,15 @@ app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
-
 // EXPRESS GETS e POSTS
 //Mostrar page - HOME
-app.get("/", (req, res) => {
-    res.sendFile(__dirname + '/public/index.html');
-    res.sendFile(__dirname + '/public/index.css');    
+
+app.get("/intro", (req, res) =>{
+    res.sendFile(__dirname + '/public/intro.html');
+})
+
+app.get("/home", (req, res) => {
+    res.sendFile(__dirname + '/public/index.html');    
 });
 
 
@@ -36,7 +39,7 @@ app.listen(port, ip, () => {
 
     console.log("■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■")
     console.log("■                 Servidor Inicializado!!                    ■")
-    console.log(`■ 1) Para Acessar o Servidor: http://${ip}:${port}/home     ■`)
+    console.log(`■ 1) Para Acessar o Servidor: http://${ip}:${port}           ■`)
     console.log("■ 2) Para Derrubar o Servidor: ctrl + c                      ■")
     console.log("■ 3) Para Reiniciar o Servidor: rs                           ■")
     console.log("■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■")
